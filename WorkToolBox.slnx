@@ -1,0 +1,11 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="WorkToolBoxApp/WorkToolBoxApp.vcxproj">
+    <Platform Project="x64" />
+  </Project>
+  <Project Path="WorkToolBoxCore/WorkToolBoxCore.vcxproj" />
+  <Project Path="WorkToolBoxTests/WorkToolBoxTests.vcxproj" />
+</Solution>
