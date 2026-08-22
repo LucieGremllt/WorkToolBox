@@ -1,0 +1,11 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="WorkToolBoxApp/WorkToolBoxApp.vcxproj" Id="f739f8b6-5e27-4ceb-a385-b19be6901a5a">
+    <Platform Project="x64" />
+  </Project>
+  <Project Path="WorkToolBoxCore/WorkToolBoxCore.vcxproj" Id="40f86c80-88d4-4ab7-b9ee-88883f16b6ac" />
+  <Project Path="WorkToolBoxTests/WorkToolBoxTests.vcxproj" Id="ad855996-1f13-4000-839d-16a5b2ea2f12" />
+</Solution>
