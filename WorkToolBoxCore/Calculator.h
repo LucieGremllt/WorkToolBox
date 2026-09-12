@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <string>
 
 /**
 *	@brief Calculator class the execute all the basic calculus of a calculator and memorize some of the previous results.
@@ -13,6 +14,7 @@ private:
 	double actualResult;
 public:
 	Calculator();
+	int getsizePrevious();
 	double add(double nb1, double nb2);
 	double substract(double nb1, double nb2);
 	double multiply(double nb1, double nb2);
@@ -21,4 +23,6 @@ public:
 	double getPrevious(int index);
 	double getActual();
 	void memorize();
+
+	double evaluate(const std::string& expression);
 };

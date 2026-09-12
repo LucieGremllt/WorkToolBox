@@ -1,4 +1,7 @@
 #include "Calculator.h"
+
+#include <string>
+#include <vector>
 #include <cassert>
 
 Calculator::Calculator() {

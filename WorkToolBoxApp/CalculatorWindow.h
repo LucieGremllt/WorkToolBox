@@ -4,7 +4,7 @@
 #define CALCULATORWINDOW_H
 
 #include <QWidget>
-
+#include "Calculator.h"
 
 class QPushButton;
 class QLineEdit;
@@ -14,7 +14,9 @@ class CalculatorWindow : public QWidget
 	Q_OBJECT
 public:
 	explicit CalculatorWindow(QWidget* parent = 0);
+	void equalButtonClicked();
 private:
+	int countResults;
 	QLineEdit* MainDisplay;
 	QLineEdit* ResultDisplay;
 	QPushButton* button0;
@@ -33,9 +35,12 @@ private:
 	QPushButton* buttonMinus;
 	QPushButton* buttonDiv;
 	QPushButton* buttonMult;
-	QPushButton* buttonPow;
-	QPushButton* buttonSqrtRoot;
 	QPushButton* buttonReturn;
+	QPushButton* ParenthesisL;
+	QPushButton* ParenthesisR;
+	QPushButton* ViewResults;
+	Calculator calculator;
 };
 
 #endif
+

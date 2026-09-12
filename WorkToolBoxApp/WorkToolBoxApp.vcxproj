@@ -66,11 +66,13 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>C:\Users\lucie\Documents\Cours\BUT\Projets perso\C++\WorkToolBox\WorkToolBoxCore</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>C:\Users\lucie\Documents\Cours\BUT\Projets perso\C++\WorkToolBox\WorkToolBoxCore</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -115,6 +117,11 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="CalculatorWindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WorkToolBoxCore\WorkToolBoxCore.vcxproj">
+      <Project>{40f86c80-88d4-4ab7-b9ee-88883f16b6ac}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

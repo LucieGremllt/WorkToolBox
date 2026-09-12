@@ -1,9 +1,11 @@
 #include "CalculatorWindow.h"
-
 #include <QFont>
 #include <QApplication>
 #include <QPushButton>
 #include <QLineEdit>
+#include <QMainWindow>
+#include <QString>
+#include <string>
 
 CalculatorWindow::CalculatorWindow(QWidget* parent) : QWidget(parent)
 {
@@ -11,6 +13,10 @@ CalculatorWindow::CalculatorWindow(QWidget* parent) : QWidget(parent)
     setFixedSize(370, 460);
 
     this->setWindowTitle("Calculator");
+
+    countResults = 0;
+
+
 
     QFont ButtonFont;
     ButtonFont.setPointSize(18);
@@ -43,17 +49,17 @@ CalculatorWindow::CalculatorWindow(QWidget* parent) : QWidget(parent)
     //TextAreas
     MainDisplay = new QLineEdit(this);
     MainDisplay->setObjectName("MainDisplay");
-    MainDisplay->setGeometry(10, 10, 350, 50);
+    MainDisplay->setGeometry(10, 10, 350, 60);
     MainDisplay->setReadOnly(true);
-    MainDisplay->setAlignment(Qt::AlignLeft);
+    MainDisplay->setAlignment(Qt::AlignCenter);
     MainDisplay->setPlaceholderText("Tapez votre calcul");
     MainDisplay->setFont(DisplayFont1);
 
     ResultDisplay = new QLineEdit(this);
     ResultDisplay->setObjectName("ResultDisplay");
-    ResultDisplay->setGeometry(10, 70, 350, 70);
+    ResultDisplay->setGeometry(10, 70, 350, 60);
     ResultDisplay->setReadOnly(true);
-    ResultDisplay->setAlignment(Qt::AlignRight);
+    ResultDisplay->setAlignment(Qt::AlignCenter);
     ResultDisplay->setFont(DisplayFont2);
 
 
@@ -85,29 +91,32 @@ CalculatorWindow::CalculatorWindow(QWidget* parent) : QWidget(parent)
     button9 = new QPushButton("9", this);
     button9->setGeometry(190, 280, 80, 50);
     button9->setFont(ButtonFont);
+    ParenthesisL = new QPushButton("(", this);
+    ParenthesisL->setGeometry(10, 340, 80, 50);
+    ParenthesisL->setFont(ButtonFont);
     button0 = new QPushButton("0", this);
     button0->setGeometry(100, 340, 80, 50);
     button0->setFont(ButtonFont);
+    ParenthesisR = new QPushButton(")", this);
+    ParenthesisR->setGeometry(190, 340, 80, 50);
+    ParenthesisR->setFont(ButtonFont);
 
     //operators
     buttonPlus = new QPushButton("+", this);
-    buttonPlus->setGeometry(280, 160, 80, 40);
+    buttonPlus->setGeometry(280, 160, 80, 50);
     buttonPlus->setFont(ButtonFont);
     buttonMinus = new QPushButton("-", this);
-    buttonMinus->setGeometry(280, 210, 80, 40);
+    buttonMinus->setGeometry(280, 220, 80, 50);
     buttonMinus->setFont(ButtonFont);
     buttonMult = new QPushButton("x", this);
-    buttonMult->setGeometry(280, 260, 80, 40);
+    buttonMult->setGeometry(280, 280, 80, 50);
     buttonMult->setFont(ButtonFont);
     buttonDiv = new QPushButton("/", this);
-    buttonDiv->setGeometry(280, 310, 80, 40);
+    buttonDiv->setGeometry(280, 340, 80, 50);
     buttonDiv->setFont(ButtonFont);
-    buttonPow = new QPushButton("xʸ", this);
-    buttonPow->setGeometry(280, 360, 80, 40);
-    buttonPow->setFont(ButtonFont);
-    buttonSqrtRoot = new QPushButton("√", this);
-    buttonSqrtRoot->setGeometry(280, 410, 80, 40);
-    buttonSqrtRoot->setFont(ButtonFont);
+    ViewResults = new QPushButton("Last", this);
+    ViewResults->setGeometry(280, 400, 80, 50);
+    ViewResults->setFont(ButtonFont);
 
     //Other
     buttonDot = new QPushButton(".", this);
@@ -133,10 +142,19 @@ CalculatorWindow::CalculatorWindow(QWidget* parent) : QWidget(parent)
     connect(button0, &QPushButton::clicked, this, [this]() {MainDisplay->insert("0");});
     connect(buttonPlus, &QPushButton::clicked, this, [this]() {MainDisplay->insert("+");});
     connect(buttonMinus, &QPushButton::clicked, this, [this]() {MainDisplay->insert("-");});
-    connect(buttonMult, &QPushButton::clicked, this, [this]() {MainDisplay->insert("x");});
+    connect(buttonMult, &QPushButton::clicked, this, [this]() {MainDisplay->insert("*");});
     connect(buttonDiv, &QPushButton::clicked, this, [this]() {MainDisplay->insert("/");});
-    connect(buttonPow, &QPushButton::clicked, this, [this]() {MainDisplay->insert("**");});
-    connect(buttonSqrtRoot, &QPushButton::clicked, this, [this]() {MainDisplay->insert("√");});
     connect(buttonDot, &QPushButton::clicked, this, [this]() {MainDisplay->insert(".");});
     connect(buttonReturn, &QPushButton::clicked, this, [this]() {MainDisplay->setText("");});
+    connect(ParenthesisL, &QPushButton::clicked, this, [this]() {MainDisplay->insert("(");});
+    connect(ParenthesisR, &QPushButton::clicked, this, [this]() {MainDisplay->insert(")");});
+    connect(buttonEqual, &QPushButton::clicked, this, [this]() {equalButtonClicked();});
+    connect(ViewResults, &QPushButton::clicked, this, [this]() {});
+
 }
+
+void CalculatorWindow::equalButtonClicked()
+{
+
+}
+
