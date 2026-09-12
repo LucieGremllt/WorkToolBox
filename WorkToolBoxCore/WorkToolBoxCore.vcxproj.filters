@@ -21,18 +21,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Calculator.h">
-      <Filter>Fichiers d%27en-tête\Calculator</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Calculator.cpp">
+      <Filter>Fichiers sources\Calculator</Filter>
+    </ClCompile>
+    <ClCompile Include="Parser.cpp">
+      <Filter>Fichiers sources\Calculator</Filter>
+    </ClCompile>
+    <ClCompile Include="CalculatorDataType.cpp">
       <Filter>Fichiers sources\Calculator</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Calculator.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Calculator.h">
+      <Filter>Fichiers d%27en-tête\Calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="Parser.h">
+      <Filter>Fichiers d%27en-tête\Calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="CalculusDataType.h">
+      <Filter>Fichiers d%27en-tête\Calculator</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
