@@ -144,10 +144,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CalculatorTests.cpp" />
+    <ClCompile Include="lexerTest.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ParserTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CalculatorTests.h" />
+    <ClInclude Include="lexerTest.h" />
+    <ClInclude Include="ParserTest.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WorkToolBoxCore\WorkToolBoxCore.vcxproj">

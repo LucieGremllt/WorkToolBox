@@ -13,18 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Calculator">
+      <UniqueIdentifier>{45a4adc3-9d88-42bf-b0b5-672936d418e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\calculator">
+      <UniqueIdentifier>{39705515-1386-4993-a872-2f0a9b8a3821}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CalculatorTests.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CalculatorTests.cpp">
+      <Filter>Fichiers sources\calculator</Filter>
+    </ClCompile>
+    <ClCompile Include="ParserTest.cpp">
+      <Filter>Fichiers sources\calculator</Filter>
+    </ClCompile>
+    <ClCompile Include="lexerTest.cpp">
+      <Filter>Fichiers sources\calculator</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CalculatorTests.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête\Calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="ParserTest.h">
+      <Filter>Fichiers d%27en-tête\Calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="lexerTest.h">
+      <Filter>Fichiers d%27en-tête\Calculator</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
