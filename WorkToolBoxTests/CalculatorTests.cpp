@@ -1,6 +1,7 @@
 #include "CalculatorTests.h"
 #include "Calculator.h"
 #include <cassert>
+#include <iostream>
 
 void CalculatorTests() {
 	//new calculator
@@ -34,5 +35,9 @@ void CalculatorTests() {
 	calculator.memorize();
 	assert(calculator.getPrevious(0) == -1);
 
+
+	//Resolving an expression
+	std::string expr = "(2^2+3)*2.5";
+	assert(calculator.calculate(expr) == "17.500000");
 }
 

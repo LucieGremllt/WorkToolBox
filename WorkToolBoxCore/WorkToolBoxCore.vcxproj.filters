@@ -27,9 +27,6 @@
     <ClCompile Include="Parser.cpp">
       <Filter>Fichiers sources\Calculator</Filter>
     </ClCompile>
-    <ClCompile Include="CalculusDataType.cpp">
-      <Filter>Fichiers sources\Calculator</Filter>
-    </ClCompile>
     <ClCompile Include="lexer.cpp">
       <Filter>Fichiers sources\Calculator</Filter>
     </ClCompile>
@@ -42,9 +39,6 @@
       <Filter>Fichiers d%27en-tête\Calculator</Filter>
     </ClInclude>
     <ClInclude Include="Parser.h">
-      <Filter>Fichiers d%27en-tête\Calculator</Filter>
-    </ClInclude>
-    <ClInclude Include="CalculusDataType.h">
       <Filter>Fichiers d%27en-tête\Calculator</Filter>
     </ClInclude>
     <ClInclude Include="lexer.h">

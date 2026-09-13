@@ -24,9 +24,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="CalculusDataTypeTest.cpp">
-      <Filter>Fichiers sources\calculator</Filter>
-    </ClCompile>
     <ClCompile Include="CalculatorTests.cpp">
       <Filter>Fichiers sources\calculator</Filter>
     </ClCompile>
@@ -38,9 +35,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CalculusDataTypeTest.h">
-      <Filter>Fichiers d%27en-tête\Calculator</Filter>
-    </ClInclude>
     <ClInclude Include="CalculatorTests.h">
       <Filter>Fichiers d%27en-tête\Calculator</Filter>
     </ClInclude>
