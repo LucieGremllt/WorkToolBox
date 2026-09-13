@@ -1,8 +1,8 @@
 #include "Parser.h"
 #include <cctype>
 
-std::vector<std::string> parseExpr(std::string& expr) {
-	std::vector<std::string> elements;
+std::vector<Token> parseExpr(const std::string& expr) {
+	std::vector<Token> elements;
 	std::string element;
 
 	char character;
@@ -16,12 +16,12 @@ std::vector<std::string> parseExpr(std::string& expr) {
 				element.push_back(character);
 			}
 			else {
-				elements.push_back(element);
+				elements.push_back(getToken(element));
 				element = character;
 			}
 		}
 	}
-	elements.push_back(element);
+	elements.push_back(getToken(element));
 	return elements;
 }
 

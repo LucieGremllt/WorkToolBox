@@ -1,7 +1,7 @@
 #pragma once
-#include "CalculusDataType.h"
+#include "lexer.h"
 #include <vector>
 #include <string>
 
-std::vector<std::string> parseExpr(std::string& expr);
+std::vector<Token> parseExpr(const std::string& expr);
 

@@ -25,3 +25,6 @@ CalculusDataType getType(char c) {
 	}
 	return type;
 }
+
+/*plus,minus,mult,div*/
+#define calculusPemdas = [1,1,2,2,3]

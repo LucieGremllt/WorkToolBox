@@ -33,6 +33,9 @@
     <ClCompile Include="ParserTest.cpp">
       <Filter>Fichiers sources\calculator</Filter>
     </ClCompile>
+    <ClCompile Include="lexerTest.cpp">
+      <Filter>Fichiers sources\calculator</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CalculusDataTypeTest.h">
@@ -42,6 +45,9 @@
       <Filter>Fichiers d%27en-tête\Calculator</Filter>
     </ClInclude>
     <ClInclude Include="ParserTest.h">
+      <Filter>Fichiers d%27en-tête\Calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="lexerTest.h">
       <Filter>Fichiers d%27en-tête\Calculator</Filter>
     </ClInclude>
   </ItemGroup>

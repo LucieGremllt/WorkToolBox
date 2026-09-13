@@ -24,5 +24,5 @@ public:
 	double getActual();
 	void memorize();
 
-	double evaluate(const std::string& expression);
+	double calculate(const std::string& expression);
 };

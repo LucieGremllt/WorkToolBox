@@ -1,4 +1,5 @@
 #include "Calculator.h"
+#include "Parser.h"
 
 #include <string>
 #include <vector>
@@ -41,4 +42,8 @@ void Calculator::memorize() {
 		previousResults.erase(previousResults.begin());
 	}
 	previousResults.push_back(actualResult);
+}
+double Calculator::calculate(const std::string& expression) {
+	std::vector<Token> ParsedExpr = parseExpr(expression);
+	return NULL;
 }
