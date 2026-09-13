@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{40f86c80-88d4-4ab7-b9ee-88883f16b6ac}</ProjectGuid>
+    <ProjectGuid>{E106B2D8-A215-4504-A2E6-06F4196E0E7D}</ProjectGuid>
     <RootNamespace>WorkToolBoxCore</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
