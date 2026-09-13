@@ -17,7 +17,6 @@ CalculatorWindow::CalculatorWindow(QWidget* parent) : QWidget(parent)
     countResults = 0;
 
 
-
     QFont ButtonFont;
     ButtonFont.setPointSize(18);
     QFont DisplayFont1;
@@ -114,9 +113,9 @@ CalculatorWindow::CalculatorWindow(QWidget* parent) : QWidget(parent)
     buttonDiv = new QPushButton("/", this);
     buttonDiv->setGeometry(280, 340, 80, 50);
     buttonDiv->setFont(ButtonFont);
-    ViewResults = new QPushButton("Last", this);
-    ViewResults->setGeometry(280, 400, 80, 50);
-    ViewResults->setFont(ButtonFont);
+    buttonPower = new QPushButton("^", this);
+    buttonPower->setGeometry(280, 400, 80, 50);
+    buttonPower->setFont(ButtonFont);
 
     //Other
     buttonDot = new QPushButton(".", this);
@@ -145,16 +144,22 @@ CalculatorWindow::CalculatorWindow(QWidget* parent) : QWidget(parent)
     connect(buttonMult, &QPushButton::clicked, this, [this]() {MainDisplay->insert("*");});
     connect(buttonDiv, &QPushButton::clicked, this, [this]() {MainDisplay->insert("/");});
     connect(buttonDot, &QPushButton::clicked, this, [this]() {MainDisplay->insert(".");});
+    connect(buttonPower, &QPushButton::clicked, this, [this]() {MainDisplay->insert("^");});
     connect(buttonReturn, &QPushButton::clicked, this, [this]() {MainDisplay->setText("");});
     connect(ParenthesisL, &QPushButton::clicked, this, [this]() {MainDisplay->insert("(");});
     connect(ParenthesisR, &QPushButton::clicked, this, [this]() {MainDisplay->insert(")");});
     connect(buttonEqual, &QPushButton::clicked, this, [this]() {equalButtonClicked();});
-    connect(ViewResults, &QPushButton::clicked, this, [this]() {});
-
 }
 
 void CalculatorWindow::equalButtonClicked()
 {
-
+    Calculator c;
+    if (MainDisplay->text().size() == 0) {
+        ResultDisplay->setText("Entrez une expression");
+    }
+    else {
+        QString str = QString::fromStdString(c.calculate(MainDisplay->text().toStdString()));
+        ResultDisplay->setText(str);
+    }
 }
 

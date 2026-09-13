@@ -30,19 +30,6 @@ double Calculator::power(double nb, double expo) {
 	actualResult = pow(nb, expo);
 	return actualResult;
 }
-double Calculator::getPrevious(int index) {
-	assert(index >= 0);
-	return previousResults[index];
-}
-double Calculator::getActual() {
-	return actualResult;
-}
-void Calculator::memorize() {
-	if (previousResults.size() == maxMemorized) {
-		previousResults.erase(previousResults.begin());
-	}
-	previousResults.push_back(actualResult);
-}
 std::string Calculator::calculate(const std::string& expression) {
 	std::vector<Token> ParsedExpr = parseExpr(expression);
 	ParsedExpr = analyze(ParsedExpr);

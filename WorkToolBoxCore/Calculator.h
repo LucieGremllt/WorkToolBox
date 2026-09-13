@@ -15,15 +15,11 @@ private:
 	double actualResult;
 public:
 	Calculator();
-	int getsizePrevious();
 	double add(double nb1, double nb2);
 	double substract(double nb1, double nb2);
 	double multiply(double nb1, double nb2);
 	double divide(double nb1, double nb2);
 	double power(double nb, double expo);
-	double getPrevious(int index);
-	double getActual();
-	void memorize();
 
 	std::string calculate(const std::string& expression);
 };

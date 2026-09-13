@@ -19,6 +19,7 @@ private:
 	int countResults;
 	QLineEdit* MainDisplay;
 	QLineEdit* ResultDisplay;
+
 	QPushButton* button0;
 	QPushButton* button1;
 	QPushButton* button2;
@@ -35,10 +36,11 @@ private:
 	QPushButton* buttonMinus;
 	QPushButton* buttonDiv;
 	QPushButton* buttonMult;
+	QPushButton* buttonPower;
+
 	QPushButton* buttonReturn;
 	QPushButton* ParenthesisL;
 	QPushButton* ParenthesisR;
-	QPushButton* ViewResults;
 	Calculator calculator;
 };
 
